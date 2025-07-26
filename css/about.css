@@ -6,12 +6,12 @@
 
 .about-header {
   width: 100%;
-  padding: 20em 0 10em 0;
+  padding: clamp(5rem, 10vw, 20rem) 0 clamp(3rem, 5vw, 10rem) 0;
   display: flex;
 }
 
 .about-col {
-  padding: 1em;
+  padding: clamp(0.5rem, 1vw, 1rem);
 }
 
 .about-col:nth-child(1) {
@@ -26,12 +26,16 @@
   width: 85%;
   color: rgba(255, 255, 255, 0.125);
   transition: color 0.3s;
+  font-size: var(--scale-xl);
+  line-height: 1.2;
 }
 
 .about-copy {
   width: 50%;
-  padding: 10em 1em 5em 1em;
+  padding: clamp(3rem, 5vw, 10rem) clamp(0.5rem, 1vw, 1rem) clamp(2rem, 3vw, 5rem) clamp(0.5rem, 1vw, 1rem);
   text-transform: uppercase;
+  font-size: var(--scale-md);
+  line-height: 1.5;
 }
 
 @media (max-width: 900px) {
@@ -40,13 +44,13 @@
   }
 
   .about-header {
-    padding: 5em 0 5em 0;
+    padding: clamp(3rem, 5vw, 5rem) 0;
     flex-direction: column;
   }
 
   .about-col h2 {
     width: 100%;
-    font-size: 64px;
+    font-size: var(--scale-lg);
   }
 
   .about-copy {
