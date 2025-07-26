@@ -20,7 +20,7 @@ body {
     position: relative;
 }
 
-/* Subtle animated gradient glow */
+/* Subtle animated  */
 body::before {
     content: "";
     position: absolute;
