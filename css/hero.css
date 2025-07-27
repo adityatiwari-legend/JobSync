@@ -48,14 +48,18 @@
 .hero-header h1 {
   text-transform: uppercase;
   font-family: var(--font-secondary);
-  font-size: 13vw;
+  font-size: clamp(3rem, 13vw, 15rem);
   color: var(--color-text);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 p#site-intro {
-  text-indent: 10em;
+  text-indent: clamp(2rem, 10em, 10em);
   margin-top: 2em;
   text-transform: uppercase;
+  font-size: var(--scale-base);
+  line-height: var(--line-height-normal);
 }
 
 @media (max-width: 900px) {
@@ -66,8 +70,10 @@ p#site-intro {
   }
 
   p#site-intro {
-    margin-top: 0;
+    margin-top: 0.5em;
     text-indent: 0;
+    font-size: var(--scale-sm);
+    line-height: var(--line-height-normal);
   }
 
   .hero-img {
@@ -75,7 +81,8 @@ p#site-intro {
   }
 
   .resume-upload {
-    width: 80%;
+    width: 90%;
+    padding: 12px;
   }
 
   .job-recommendations {
@@ -85,6 +92,21 @@ p#site-intro {
     
   .hero {
     padding-top: 120px; /* Adjust for smaller job recommendations height on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-header h1 {
+    font-size: clamp(2.5rem, 15vw, 5rem);
+  }
+  
+  .resume-upload {
+    width: 95%;
+    padding: 10px;
+  }
+  
+  p#site-intro {
+    font-size: var(--scale-xs);
   }
 }
 

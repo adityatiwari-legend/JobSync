@@ -52,16 +52,16 @@ a,
 p,
 span {
   text-decoration: none;
-  font-size: 13px;
+  font-size: var(--scale-base);
   color: var(--color-text);
 }
 
 h2 {
   font-weight: 500;
-  font-size: 80px;
+  font-size: var(--scale-xxl);
   color: var(--color-text-secondary);
-  letter-spacing: -2px;
-  line-height: 100%;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 img {
@@ -85,6 +85,16 @@ img {
   background-color: rgba(255, 255, 255, 0.125);
   border-radius: 12px;
   margin-bottom: 2em;
+  font-size: var(--scale-sm);
+}
+
+@media (max-width: 480px) {
+  .callout {
+    font-size: var(--scale-xs);
+    padding: 0.4em 0.8em;
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+  }
 }
 
 /* scrollbar styling */

@@ -23,8 +23,10 @@ footer {
   color: var(--color-text);
   text-transform: uppercase;
   font-family: var(--font-secondary);
-  font-size: 9vw;
+  font-size: clamp(2.5rem, 9vw, 10rem);
   margin: 0;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 .footer-sub-header {
@@ -33,14 +35,14 @@ footer {
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid var(--color-text);
-  margin-bottom: 10em;
+  margin-bottom: clamp(5em, 10vw, 10em);
 }
 
 .footer-sub-header h2 {
   color: var(--color-text);
   text-transform: uppercase;
   font-family: var(--font-secondary);
-  font-size: 1.5vw;
+  font-size: clamp(1rem, 1.5vw, 2rem);
   letter-spacing: 0.025em;
   margin: 0;
 }
@@ -237,7 +239,8 @@ input:focus {
 
 @media (max-width: 900px) {
   .footer-sub-header h2 {
-    font-size: 3vw;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    letter-spacing: 0.02em;
   }
 
   .footer-bg {
@@ -245,7 +248,7 @@ input:focus {
   }
 
   .footer-header {
-    padding: 20em 1.5em 0 1.5em;
+    padding: clamp(10em, 20vh, 20em) 1.5em 0 1.5em;
   }
 
   .footer-form {
@@ -258,7 +261,7 @@ input:focus {
 
   .submit-btn {
     padding: 0;
-    min-height: 80px;
+    min-height: clamp(60px, 10vh, 80px);
   }
 
   .submit-btn button {
@@ -266,10 +269,39 @@ input:focus {
   }
 
   .submit-btn h3 {
-    font-size: 5vw;
+    font-size: clamp(1.2rem, 5vw, 2rem);
   }
 
   .footer-copyright {
-    padding: 0.5em 1.5em 15em 1.5em;
+    padding: 0.5em 1.5em clamp(10em, 15vh, 15em) 1.5em;
+    font-size: var(--scale-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-header h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+  
+  .footer-sub-header h2 {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  }
+  
+  .footer-sub-header {
+    margin-bottom: clamp(3em, 8vw, 5em);
+  }
+  
+  .footer-ctas {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  
+  .footer-cta-icon {
+    padding: 0.75em 0.875em 0.5em 0.875em;
+    font-size: var(--scale-xs);
+  }
+  
+  .footer-copyright {
+    font-size: var(--scale-xs);
   }
 }

@@ -8,8 +8,8 @@ const tl = gsap
   .timeline({
     scrollTrigger: {
       trigger: ".about",
-      start: "top 50%",
-      end: "+=125%",
+      start: "top 60%",
+      end: "+=50%",
       scrub: 0.5,
     },
   })

@@ -3,7 +3,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 70px;
+  height: clamp(60px, 10vh, 70px);
   padding: 1.5em 1em;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@ nav {
 }
 
 .logo img {
-  width: 100px;
+  width: clamp(80px, 10vw, 100px);
 }
 
 .ctas {
@@ -115,17 +115,19 @@ nav {
     left: 0;
     bottom: 1em;
     width: 100%;
-    height: 60px;
+    height: clamp(50px, 8vh, 60px);
     padding: 1em;
   }
 
   .clock {
     text-align: right;
+    font-size: var(--scale-sm);
   }
 
   .menu,
   .contact {
     padding: 1.25em 0.5em;
+    font-size: var(--scale-sm);
   }
 
   .menu .menu-icon {
@@ -139,5 +141,25 @@ nav {
   .menu.active p,
   .menu.active ion-icon {
     color: var(--color-text);
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    height: clamp(50px, 8vh, 60px);
+    padding: 1em 0.75em;
+  }
+  
+  .logo img {
+    width: clamp(70px, 8vw, 80px);
+  }
+  
+  .clock {
+    font-size: var(--scale-xs);
+  }
+  
+  .ctas {
+    height: clamp(40px, 7vh, 50px);
+    padding: 0.75em;
   }
 }
